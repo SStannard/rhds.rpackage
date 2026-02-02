@@ -18,6 +18,13 @@
 ## The following function extracts the participant identifier
 ## from a sample id/barcode.
 
+#' Extract participants ID from TGCA barcode 
+#' 
+#' Extracts the participant identifier from a TCGA sample barcode 
+#' 
+#' @param id TGCA barcode
+#' @return A sstring representing participant ID
+#' @export 
 extract.participant <- function(id) {
   sub("TCGA-[^-]+-([^-]+)-.*", "\\1", id)
 }
